@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; /* definir uma font-size padrão */
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #889;
+}
+
+.container {
+    height: 400px;
+    width: 300px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 80px auto 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px black;
+    background-color: white;
+}
+
+#homer {
+    position: relative;
+    width: 94px;
+    height: 133px;
+    margin: 0 auto;
+}
+
+#homer .cabeca {
+    background: #fbd800;
+}
+
+.cabelo1 {
+   position: absolute;
+   left: 30px;
+   border: 3px solid transparent;
+   border-top: 3px solid black;
+   border-left: 3px solid black;
+   width: 70px;
+   height: 65px;
+   border-radius: 50%;
+   transform: rotate(25deg);
+   z-index: 10;
+   top: -18px;
+}
+
+.cabelo2 {
+    position: absolute;
+    left: 50px;
+    border: 3px solid transparent;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    transform: rotate(25deg);
+    z-index: 10;
+    top: -9px;
+ }
+
+ .cabeca {
+     border-top: 3px solid black;
+     border-left: 3px solid black;
+     border-right: 3px solid black;
+     width: 150px;
+     height: 110px;
+     border-radius: 100px 110px 0 0;
+     position: absolute;
+     top: -65px;
+     transform: rotate(-8deg);
+ }
+
+ .cabeca::after {
+     position: absolute;
+     right: -10px;
+     bottom: -4px;
+     content: '';
+     width: 35px;
+     height: 25px;
+     display: block;
+     background-color: inherit;
+     border-radius: 50%;
+     border: 3px solid transparent;
+     border-right: 3px solid black ;
+     border-bottom: 3px solid black ;
+     transform: rotate(-35deg);
+ }
+
+ .olho {
+    position: absolute;
+    width: 70px;
+    height: 66px;
+    top: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    right: -75px;
+    transform: rotate(-5deg);
+    z-index: 10;
+ }
+
+ .olho-left {
+    position: absolute;
+    width: 70px;
+    height: 66px;
+    top: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    right: -30px;
+    transform: rotate(-5deg);
+    z-index: 110;
+ }
+
+ .pupila {
+   position: absolute;
+   top: 43px;
+   left: 75px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: black;
+   z-index: 1000;
+ }
+
+ .pupila2 {
+    position: absolute;
+    top: 43px;
+    left: 135px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1000;
+  }
+
+.nariz {
+    position: absolute;
+    background: #fbd800;
+    bottom: 45px;
+    right: 37px;
+    left: 110px;
+    width: 45px;
+    height: 27px;
+    border: 3px solid transparent;
+    /* border-left: 3px solid black; */
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 0 90px 100px 0; 
+    transform: rotate(-8deg);
+    z-index: 100;
+}
+
+.queixo {
+    position: absolute;
+    z-index: -1;
+    width: 107px;
+    height: 135px;
+    background-color: #fbd800;
+    border-top: 0px solid black;
+    border-top: 3px solid black;
+    transform: rotate(-99deg);
+    top: 27px;
+    left: 30px;
+    z-index: 1;
+}
+
+.barba {
+    position: absolute;
+    width: 90px;
+    height: 80px;
+    background-color: #866b38;
+    border-radius: 50%;
+    z-index: 10;  
+    top: 88px;  
+    right: -50px;
+    border: 3px solid black;
+    transform: rotate(165deg);
+}
+
+.barba::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    right: 30px;
+    width: 80px;
+    height: 40px;
+    background: inherit;
+    border: 3px solid transparent;
+    display: block;
+    border-bottom: 3px solid black;
+    border-right: none;
+    transform: rotate(9deg);
+}
+
+.barba::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -3px;
+    background-color: inherit;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    transform: rotate(10deg);
+}
+
+.sorriso {
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color: #866b38;
+    top: 50px;
+    border: 3px solid transparent;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 50%;
+    z-index: 10;
+    top: 110px;
+    right: -95px;
+    transform: rotate(-5deg);
+}
+
+.sorriso::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 15px;
+    top: 10px;
+    left: 5px;
+    border: 3px solid transparent;
+    border-left: 3px solid black;
+    border-radius: 40%;
+    background-color: transparent;
+    display: block;
+    transform: rotate(10deg);
+}
+
+.sorriso::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    display: block;
+    top: -40px;
+    right: 2px;
+    background-color: inherit;
+    border: 3px solid transparent;
+    border-radius: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 50%;
+    transform: rotate(70deg);
+}
+
+.orelha {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 3px solid transparent;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 50%;
+    background-color: #fbd800;
+    transform: rotate(-10deg);
+    top: 30px;
+    left: 10px;
+    z-index: 100;
+}
+
+.orelha::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+
+}
+
+.pescoco {
+    width: 100px;
+    height: 60px;
+    background-color:#fbd800;
+    position: absolute;
+    top: 146px;
+    left: 25px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.pescoco::after {
+    content: '';
+    width: 18px;
+    height: 85px;
+    position: absolute;
+    display: block;
+    top: -8px;
+    left: -24px;
+    border-radius: 58%;
+    border: 3px solid transparent;
+    border-right: 3px solid black ;
+    transform: rotate(5deg);
+}
+
+.pescoco::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 60px;
+    top: 31px;
+    left: 75px;
+    background-color: #fbd800 ;
+    border: 3px solid transparent;
+    border-right: 3px solid black;
+    border-radius: 50%;
+    transform: rotate(-39deg);
+    z-index: -10;
+}
+
+.gola-v {
+    width: 50px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotate(34deg);
+    z-index: 110;
+}
+
+.gola-v::after {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    width: 10px;
+    height: 50px;
+    background-color: #fff;
+    transform: rotate(-90deg);
+    /* z-index: 100; */
+}
+
+.gola-v::before {
+    position: absolute;
+    top: 13px;
+    right: -31px;
+    content: '';
+    width: 28px;
+    height: 30px;
+    background-color: #fff;
+    transform: rotate(-1deg);
+    /* z-index: 100; */
+}
+
+.camiseta1 {
+    width: 90px;
+    height: 44px;
+    background-color: #fff;
+    position: absolute;
+    top: 182px;
+    border: 3px solid transparent;
+    border-right: 3px solid black;
+    transform: rotate(21deg);
+}
+
+.camiseta1::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -12px;
+    width: 15px;
+    height: 53px;
+    background-color: inherit;
+    border-radius: 18px 0 0 0;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(5deg);
+    z-index: 10;
+}
+
+.camiseta1::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: -4px;
+    width: 90px;
+    height: 17px;
+    background-color: #fbd800;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom: 3px solid black;
+    z-index: -1000;
+}
+
+.camiseta2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 45px;
+    background-color: #fff;
+    border-top: 3px solid black;
+    transform: rotate(26deg);
+    right: -66px;
+    top: 180px;
+    z-index: 30;
+}
+
+/* .queixo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -33px;
+    left: 100;
+    background-color: #fbd800 ;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    transform: rotate(85deg);
+} */
+
+
+
+
